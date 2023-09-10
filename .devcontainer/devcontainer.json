@@ -1,0 +1,24 @@
+{
+  "name": "Existing Dockerfile",
+  "build": {
+    // add some linux + git + bun instead of pure bun runtime
+    "context": "..",
+    "dockerfile": "../Dockerfile"
+  },
+  "forwardPorts": [
+    3000
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "waderyan.gitblame",
+        "dbaeumer.vscode-eslint",
+        "oven.bun-vscode",
+        "ms-azuretools.vscode-docker",
+        "otovo-oss.htmx-tags",
+        "yoavbls.pretty-ts-errors"
+      ]
+    }
+  }
+}
