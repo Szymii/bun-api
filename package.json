@@ -1,0 +1,18 @@
+{
+  "name": "bunapi",
+  "module": "index.ts",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "dev": "bun --watch index.tsx",
+    "test": "bun --watch test"
+  },
+  "type": "module",
+  "dependencies": {
+    "hono": "^3.5.8"
+  }
+}
