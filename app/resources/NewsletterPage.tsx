@@ -9,22 +9,27 @@ export const NewsletterPage = (props: IProps) => {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Newsletter</title>
+        <link
+          href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
+          rel="stylesheet"
+        />
         <script
           src="https://unpkg.com/htmx.org@1.9.5"
           integrity="sha384-xcuj3WpfgjlKF+FXhSQFQ0ZNr39ln+hwjN3npfM9VBnUskLolQAcN80McRIVOPuO"
           crossorigin="anonymous"
         ></script>
-        <link
-          href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
-          rel="stylesheet"
-        />
+        <script src="https://unpkg.com/htmx.org/dist/ext/json-enc.js"></script>
       </head>
       <body class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
         <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
           <h1 class="text-2xl font-semibold mb-4">
             Sign up for the newsletter
           </h1>
-          <form hx-post="/demo/newsletter" hx-target="#result">
+          <form
+            hx-post="/demo/newsletter"
+            hx-ext="json-enc"
+            hx-target="#result"
+          >
             <label for="email" class="font-semibold">
               Email address
             </label>
