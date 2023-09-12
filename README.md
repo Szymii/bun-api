@@ -1,4 +1,4 @@
-# bunapi
+# Lets play with Bun 🥟
 
 To install dependencies:
 
