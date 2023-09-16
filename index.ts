@@ -1,13 +1,12 @@
 import { Hono } from "hono";
-import { demo } from "./app/router/demo";
+
+import { notFound, newsletter } from "./app/router";
 
 const app = new Hono();
 
 app.get("/", (c) => c.text("Hello Bun!"));
-app.notFound((c) => {
-  return c.text("Custom 404 Message", 404);
-});
-app.route("/demo", demo);
+app.notFound(notFound);
+app.route("/newsletter", newsletter);
 
 app.showRoutes();
 
