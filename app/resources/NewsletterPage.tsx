@@ -16,18 +16,15 @@ export const NewsletterPage = (props: IProps) => {
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-          integrity="sha512-abc123xyz..."
           crossorigin="anonymous"
         />
         <script
           src="https://unpkg.com/htmx.org@1.9.5"
-          integrity="sha384-xcuj3WpfgjlKF+FXhSQFQ0ZNr39ln+hwjN3npfM9VBnUskLolQAcN80McRIVOPuO"
           crossorigin="anonymous"
         ></script>
         <script src="https://unpkg.com/htmx.org/dist/ext/json-enc.js"></script>
       </head>
       <body class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
-
         <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
           <div class="absolute top-0 right-0 mt-2 mr-2">
             <i class="fas fa-envelope text-2xl">

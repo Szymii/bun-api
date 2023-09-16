@@ -4,6 +4,9 @@ import { object, parse, string } from "valibot";
 import { getMailsCountQuery } from "../repositories";
 import { EmailSubscriptionService, SendEmailService } from "../services";
 
+const emailSubscriptionService = new EmailSubscriptionService();
+const sendEmailService = new SendEmailService();
+
 export const newsletter = new Hono();
 
 newsletter.get("/", (c) => {
@@ -17,14 +20,13 @@ newsletter.post("/signup", async (c) => {
 
   try {
     const { email } = parse(object({ email: string() }), data);
-    const emailSubscriptionService = new EmailSubscriptionService();
-    const sendEmailService = new SendEmailService();
 
     emailSubscriptionService.subscribe(sendEmailService.sendSignUpConfirmation);
     emailSubscriptionService.subscribeUser(email);
+    emailSubscriptionService.unsubscribe(sendEmailService.sendSignUpConfirmation);
 
     return c.text(`${email} has been invited to newsletter`);
   } catch (e) {
-    // error
+    // console.log(e)
   }
 });
