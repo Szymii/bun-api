@@ -2,6 +2,7 @@
   "name": "bunapi",
   "module": "index.ts",
   "devDependencies": {
+    "@biomejs/biome": "1.2.2",
     "bun-types": "latest"
   },
   "peerDependencies": {
@@ -9,7 +10,9 @@
   },
   "scripts": {
     "dev": "bun --watch index.ts",
-    "test": "bun --watch test"
+    "test": "bun --watch test",
+    "format": "bun biome format ./app --write",
+    "lint": "bun biome check --apply-unsafe ./app"
   },
   "type": "module",
   "dependencies": {

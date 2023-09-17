@@ -1,9 +1,8 @@
 {
   "name": "Existing Dockerfile",
   "build": {
-    // add some linux + git + bun instead of pure bun runtime
     "context": "..",
-    "dockerfile": "../Dockerfile"
+    "dockerfile": "./Dockerfile"
   },
   "forwardPorts": [
     3000
