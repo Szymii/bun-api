@@ -1,5 +1,3 @@
-# there is no git in this image :sadge:
-FROM oven/bun
+FROM node:20-bullseye
 
 WORKDIR /app
-
