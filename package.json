@@ -12,7 +12,8 @@
     "dev": "bun --watch index.ts",
     "test": "bun --watch test",
     "format": "bun biome format ./app --write",
-    "lint": "bun biome check --apply-unsafe ./app"
+    "lint": "bun biome check --apply-unsafe ./app",
+    "lint:ci": "bun biome check ./app"
   },
   "type": "module",
   "dependencies": {
