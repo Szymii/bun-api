@@ -11,16 +11,17 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "streetsidesoftware.code-spell-checker",
-        "waderyan.gitblame",
-        "dbaeumer.vscode-eslint",
-        "oven.bun-vscode",
-        "ms-azuretools.vscode-docker",
-        "otovo-oss.htmx-tags",
-        "yoavbls.pretty-ts-errors",
-        "bradlc.vscode-tailwindcss",
-        "GitHub.vscode-github-actions"
-      ]
+		"streetsidesoftware.code-spell-checker",
+		"waderyan.gitblame",
+		"dbaeumer.vscode-eslint",
+		"oven.bun-vscode",
+		"ms-azuretools.vscode-docker",
+		"otovo-oss.htmx-tags",
+		"yoavbls.pretty-ts-errors",
+		"bradlc.vscode-tailwindcss",
+		"GitHub.vscode-github-actions",
+		"biomejs.biome"
+	]
     }
   }
 }
