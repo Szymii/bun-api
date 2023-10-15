@@ -18,7 +18,8 @@
         "ms-azuretools.vscode-docker",
         "otovo-oss.htmx-tags",
         "yoavbls.pretty-ts-errors",
-        "bradlc.vscode-tailwindcss"
+        "bradlc.vscode-tailwindcss",
+        "GitHub.vscode-github-actions"
       ]
     }
   }
