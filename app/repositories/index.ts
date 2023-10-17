@@ -1,2 +1,2 @@
-export { insertNewMailQuery } from "./insertNewMailQuery";
 export { getMailsCountQuery } from "./getMailsCountQuery";
+export { EmailRepository } from "./EmailRepository";

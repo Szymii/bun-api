@@ -1,10 +1,14 @@
 import { Hono } from "hono";
 import { object, parse, string } from "valibot";
-import { getMailsCountQuery } from "../repositories";
+import { EmailRepository, getMailsCountQuery } from "../repositories";
 import { NewsletterPage } from "../resources";
 import { EmailSubscriptionService, SendEmailService } from "../services";
 
-const emailSubscriptionService = new EmailSubscriptionService();
+import MemDB from "../db";
+
+const emailRepo = new EmailRepository(MemDB);
+
+const emailSubscriptionService = new EmailSubscriptionService(emailRepo);
 const sendEmailService = new SendEmailService();
 
 export const newsletter = new Hono();

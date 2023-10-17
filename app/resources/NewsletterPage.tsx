@@ -26,11 +26,6 @@ export const NewsletterPage = (props: IProps) => {
 			</head>
 			<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
 				<div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-					<div class="absolute top-0 right-0 mt-2 mr-2">
-						<i class="fas fa-envelope text-2xl">
-							<div class="absolute top-0 -right-1 h-2 w-2 bg-red-500 rounded-xl" />
-						</i>
-					</div>
 					<h1 class="text-2xl font-semibold mb-4">
 						Sign up for the newsletter
 					</h1>
