@@ -1,7 +1,7 @@
-import { describe, expect, it } from "bun:test";
 import { EmailRepository } from ".";
 import MockDB from "../db/MockDB";
 import { getID } from "../utils/getId";
+import { describe, expect, it } from "bun:test";
 
 describe("Email repository", () => {
 	it("Should write email to DB", async () => {
