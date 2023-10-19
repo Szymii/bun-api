@@ -1,2 +1,1 @@
-export { getMailsCountQuery } from "./getMailsCountQuery";
-export { EmailRepository } from "./EmailRepository";
+export { SubscribersRepository } from "./SubscribersRepository";

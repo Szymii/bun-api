@@ -1,10 +1,12 @@
 import { Database } from "bun:sqlite";
 
-const db = new Database(":memory:");
+// Creating new database for each test can not be optimal tho
+export const createMockDB = () => {
+	const db = new Database(":memory:");
 
-db.run(
-	"CREATE TABLE IF NOT EXISTS emails (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT)",
-);
+	db.run(
+		"CREATE TABLE IF NOT EXISTS subscribers (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT)",
+	);
 
-const MockDB = Object.freeze(db);
-export default MockDB;
+	return Object.freeze(db);
+};
