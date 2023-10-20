@@ -3,7 +3,8 @@
   "module": "index.ts",
   "devDependencies": {
     "@biomejs/biome": "1.2.2",
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "husky": "^8.0.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -13,7 +14,8 @@
     "test": "bun --watch test",
     "format": "bun biome format ./app --write",
     "lint": "bun biome check --apply-unsafe ./app",
-    "lint:ci": "bun biome check ./app"
+    "lint:ci": "bun biome check ./app",
+    "prepare": "husky install"
   },
   "type": "module",
   "dependencies": {
