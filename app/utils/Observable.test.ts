@@ -1,5 +1,5 @@
-import { describe, expect, it, mock } from "bun:test";
 import { Observable } from "./Observable";
+import { describe, expect, it, mock } from "bun:test";
 
 class FakeObservable extends Observable<number> {
 	triggerObservers(number: number) {

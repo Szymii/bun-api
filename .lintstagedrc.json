@@ -1,0 +1,5 @@
+{
+	"*.ts": ["biome check --apply-unsafe"],
+	"*.tsx": ["biome check --apply-unsafe"],
+	"*.json": ["biome check --apply-unsafe"]
+}

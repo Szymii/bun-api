@@ -1,25 +1,26 @@
 {
-  "name": "bunapi",
-  "module": "index.ts",
-  "devDependencies": {
-    "@biomejs/biome": "1.2.2",
-    "bun-types": "latest",
-    "husky": "^8.0.0"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "scripts": {
-    "dev": "bun --watch index.ts",
-    "test": "bun --watch test",
-    "format": "bun biome format ./app --write",
-    "lint": "bun biome check --apply-unsafe ./app",
-    "lint:ci": "bun biome check ./app",
-    "prepare": "husky install"
-  },
-  "type": "module",
-  "dependencies": {
-    "hono": "^3.5.8",
-    "valibot": "^0.15.0"
-  }
+	"name": "bunapi",
+	"module": "index.ts",
+	"devDependencies": {
+		"@biomejs/biome": "1.2.2",
+		"bun-types": "latest",
+		"husky": "^8.0.0",
+		"lint-staged": "^15.0.2"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"scripts": {
+		"dev": "bun --watch index.ts",
+		"test": "bun --watch test",
+		"format": "bun biome format ./app --write",
+		"lint": "bun biome check --apply-unsafe ./app",
+		"lint:ci": "bun biome check ./app",
+		"prepare": "husky install"
+	},
+	"type": "module",
+	"dependencies": {
+		"hono": "^3.5.8",
+		"valibot": "^0.15.0"
+	}
 }

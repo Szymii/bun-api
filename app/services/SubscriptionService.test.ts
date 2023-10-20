@@ -1,8 +1,8 @@
-import { describe, expect, it } from "bun:test";
+import { SubscriptionService } from ".";
 import { createMockDB } from "../db/MockDB";
 import { SubscribersRepository } from "../repositories";
 import { getID } from "../utils/getId";
-import { SubscriptionService } from ".";
+import { describe, expect, it } from "bun:test";
 
 describe("Subscription service", () => {
 	it("Add new subscriber to DB", async () => {
