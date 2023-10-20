@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { object, parse, string } from "valibot";
 import { SubscribersRepository } from "../repositories";
 import { NewsletterPage } from "../resources";
-import { SubscriptionService, SendEmailService } from "../services";
+import { SendEmailService, SubscriptionService } from "../services";
 
 import MemDB from "../db";
 
@@ -27,9 +27,7 @@ newsletter.post("/signup", async (c) => {
 
 		subscriptionService.subscribe(sendEmailService.sendSignUpConfirmation);
 		subscriptionService.addSubscriber(email);
-		subscriptionService.unsubscribe(
-			sendEmailService.sendSignUpConfirmation,
-		);
+		subscriptionService.unsubscribe(sendEmailService.sendSignUpConfirmation);
 
 		return c.text(`${email} has been invited to newsletter`);
 	} catch (e) {
