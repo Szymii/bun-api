@@ -1,4 +1,4 @@
-import app from "../..";
+import app from "..";
 import { expect, it } from "bun:test";
 
 it("Should return 404 Response with custom message", async () => {

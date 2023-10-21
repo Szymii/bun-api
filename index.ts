@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 
-import { notFound, newsletter } from "./app/router";
+import { newsletter, notFound } from "./app/router";
 
 const app = new Hono();
 
@@ -10,4 +10,7 @@ app.route("/newsletter", newsletter);
 
 app.showRoutes();
 
-export default app;
+export default {
+	port: 5001,
+	fetch: app.fetch,
+};
