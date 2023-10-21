@@ -12,7 +12,7 @@
 	},
 	"scripts": {
 		"dev": "bun --watch index.ts",
-		"test": "bun --watch test",
+		"test": "bun test",
 		"format": "bun biome format ./app --write",
 		"lint": "bun biome check --apply-unsafe ./app",
 		"lint:ci": "bun biome check ./app",
