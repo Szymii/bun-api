@@ -41,6 +41,6 @@ newsletter.post("/signup", async (c) => {
 
 		return c.text(`${email} has been invited to newsletter`);
 	} catch (e) {
-		return c.json(flatten(e as ValiError).nested, 400);
+		if (e instanceof ValiError) return c.json(flatten(e).nested, 400);
 	}
 });
