@@ -1,5 +1,12 @@
 import { Hono } from "hono";
-import { object, parse, string } from "valibot";
+import {
+	ValiError,
+	email as botEmail,
+	flatten,
+	object,
+	parse,
+	string,
+} from "valibot";
 import { SubscribersRepository } from "../repositories";
 import { NewsletterPage } from "../resources";
 import { SendEmailService, SubscriptionService } from "../services";
@@ -23,7 +30,10 @@ newsletter.post("/signup", async (c) => {
 	const data = await c.req.json();
 
 	try {
-		const { email } = parse(object({ email: string() }), data);
+		const { email } = parse(
+			object({ email: string("Not a string", [botEmail("Incorrect email")]) }),
+			data,
+		);
 
 		subscriptionService.subscribe(sendEmailService.sendSignUpConfirmation);
 		subscriptionService.addSubscriber(email);
@@ -31,6 +41,6 @@ newsletter.post("/signup", async (c) => {
 
 		return c.text(`${email} has been invited to newsletter`);
 	} catch (e) {
-		// console.log(e)
+		return c.json(flatten(e as ValiError).nested, 400);
 	}
 });
