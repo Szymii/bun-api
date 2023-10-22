@@ -41,6 +41,14 @@ newsletter.post("/signup", async (c) => {
 
 		return c.text(`${email} has been invited to newsletter`);
 	} catch (e) {
-		if (e instanceof ValiError) return c.json(flatten(e).nested, 400);
+		if (e instanceof ValiError) {
+			return c.json(flatten(e).nested, 400);
+		}
+
+		if (e instanceof Error && e.message === "Email already exist") {
+			return c.json({ message: e.message }, 400);
+		}
+
+		return c.json(e, 500);
 	}
 });

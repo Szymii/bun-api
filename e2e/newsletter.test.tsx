@@ -27,16 +27,18 @@ describe("Newsletter route", () => {
 		);
 	});
 
-	it.skip("should return 400 when email already exists", async () => {
+	// This test depends on previous one :/
+	it("should return 400 when email already exists", async () => {
 		const req = new Request("http://localhost/newsletter/signup", {
 			method: "POST",
 			body: JSON.stringify({ email: EMAIL }),
 		});
 
 		const res = await app.fetch(req);
+		const json = await res.json();
 
 		expect(res.status).toBe(400);
-		expect(await res.text()).toContain(`${EMAIL} already exists`);
+		expect(json.message).toContain("Email already exist");
 	});
 
 	it("should return 400 when body is not a string", async () => {
