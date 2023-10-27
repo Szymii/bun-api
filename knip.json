@@ -1,0 +1,6 @@
+{
+	"entry": ["index.ts", "**/*.test.tsx", "**/*.test.ts"],
+	"project": ["app/**/*.ts", "app/**/*.tsx", "e2e/**/*.tsx", "e2e/**/*.ts"],
+	"ignoreDependencies": ["bun-types", "lint-staged"],
+	"exclude": ["enumMembers", "unlisted"]
+}

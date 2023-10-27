@@ -1,4 +1,4 @@
-import { Subscriber } from "../models/Subscriber";
+import { Subscriber } from "../models";
 import Database from "bun:sqlite";
 
 export class SubscribersRepository {

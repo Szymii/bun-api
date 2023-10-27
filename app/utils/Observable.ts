@@ -1,4 +1,4 @@
-export type ObservableFunction<T> = (event: T) => void;
+type ObservableFunction<T> = (event: T) => void;
 
 export class Observable<T> {
 	private observers: Array<ObservableFunction<T>>;

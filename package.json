@@ -5,6 +5,7 @@
 		"@biomejs/biome": "1.2.2",
 		"bun-types": "latest",
 		"husky": "^8.0.0",
+		"knip": "^2.38.4",
 		"lint-staged": "^15.0.2"
 	},
 	"peerDependencies": {
@@ -16,6 +17,7 @@
 		"format": "bun biome format ./app --write",
 		"lint": "bun biome check --apply-unsafe ./app",
 		"lint:ci": "bun biome check ./app",
+		"knip": "knip",
 		"prepare": "husky install"
 	},
 	"type": "module",
